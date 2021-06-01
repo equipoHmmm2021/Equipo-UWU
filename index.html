@@ -6,29 +6,43 @@
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <link rel="stylesheet" href="Estilos.css">
 <link rel="stylesheet" href="Fuentes.css" type="text/css">
-<link rel="stylesheet" href="Efecto social media.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="popup.css">
 <style>
+.button {
+  padding: 15px 25px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #f44336;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 9px #be352b;
+}
 
-	p{font-size: 30px}
-	h3{font-size: 72px}
+.button:hover {background-color: #f44336}
 
-body,h1,h2,h3,h4,h5,h6 {font-family: "WrongFont", sans-serif}
+.button:active {
+  background-color: #f44336;
+  box-shadow: 0 5px #be352b;
+  transform: translateY(4px);
+}
 
+
+body,h1,h2,h4,h5,h6 {font-family: "Raleway", sans-serif}
+h3{
+  font-family: "WrongFont";
+  font-size: xx-large;
+  font-weight: bold;
+}
 body, html {
   height: 100%;
   line-height: 1.8;
-background-image: url("WallpaperTru.jpg");
-	background-attachment: fixed;
-	background-position: center;
-  background-size: cover;
-	min-height: 100%;
-	background-repeat: no-repeat;
 }
-	
-	
 
 /* Full height image header */
 .bgimg-1 {
@@ -36,31 +50,33 @@ background-image: url("WallpaperTru.jpg");
   background-size: cover;
   background-image: url("WallpaperTru.jpg");
   min-height: 100%;
-	
-background-attachment: fixed;
-	background-repeat: no-repeat;
 }
 
 .w3-bar .w3-button {
   padding: 16px;
+  
 }
 .w3-bar .w3-button {
   padding: 16px;
 }
+canvas{
+  background-color: #255F85;
 
+}
 </style>
-<body onLoad="javascript:showModal();"><!-- onLoad="javascript:showModal();"-->
+<body onLoad="javascript:showModal()">
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-card" id="myNavbar" style="color:rgb(255, 255, 255)!important;background-color:#44141c!important">
-    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="abas.png" width="200px" height="30px"></a> <!-- w3-bar-item -->
+  <div class="w3-bar w3-card" id="myNavbar" style="color:rgb(255, 255, 255)!important;background-color:#797878!important">
+    <a href="#home" class="w3-bar-item w3-button w3-wide" style="font-family: WrongFont; font-size: 22px;"><img src="abas.png"  width="200px" height="30px"></img></a> <!-- w3-bar-item -->
+    
     <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small" id="headButton">
-      <a href="#about" class="w3-bar-item w3-button" style="padding: 18px;">THE WRONG REASON</a>
-      <a href="#team" class="w3-bar-item w3-button" style="padding: 18px;"><i class="fa fa-user"></i> EQUIPO</a>
-      <a href="#work" class="w3-bar-item w3-button" style="padding: 18px;"><i class="fa fa-th"></i> &nbsp;CAMPAÑA</a>
+    <div class="w3-right w3-hide-small" id="headButton" style="font-family: WrongFont; font-size: 20px;">
+      <a href="#about" class="w3-bar-item w3-button" style="padding: 18px;"><i class="fas fa-gamepad" style="padding-right: 5px;"></i>CARACTERÍSTICAS</a>
+      <a href="#work" class="w3-bar-item w3-button" style="padding: 18px;"><i class="fa fa-th"></i> IMÁGENES</a>
       <a href="#pricing" class="w3-bar-item w3-button" style="padding: 18px;"><i class="fa fa-usd"></i> CONTRIBUCIONES</a>
-      <a href="#contact" class="w3-bar-item w3-button" style="padding: 18px;"><i class="fa fa-envelope"></i> FAQ</a>
+      <a href="#team" class="w3-bar-item w3-button" style="padding: 18px;"><i class="fa fa-user"></i> EQUIPO</a>
+      <a href="#contact" class="w3-bar-item w3-button" style="padding: 18px;"><i class="fa fa-envelope"></i> CONTACTO</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -74,45 +90,45 @@ background-attachment: fixed;
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">EQUIPO</a>
   <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
   <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">EQUIPO</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-grayscale-min" id="home">
-  <div class="w3-center w3-text-white w3-display-middle" style="padding:48px">
-    <span class="  w3-jumbo w3-hide-small" style="font-family: WrongFont; font-size: 150px; padding-bottom: 0px;">The Wrong Reason</span><br> <!--w3-jumbo-->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class=" w3-jumbo w3-hide-small" style="font-family: WrongFont; font-size: 150px; padding-bottom: 0px;">The Wrong Reason</span><br> <!--w3-jumbo-->
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">The Wrong Reason</span><br>
     <span class="w3-large">Conoce la otra cara de la moneda</span>
     <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Colabora a crear su historia</a></p>
   </div> 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fab fa-instagram w3-hover-opacity"></i>
+   <a href="https://www.instagram.com/abaspistudio/"><i class="fab fa-instagram w3-hover-opacity"></i></a> 
     <i class="fab fa-twitter w3-hover-opacity"></i>
   </div>
 </header>
 
 <!-- About Section -->
-<div class="w3-container" style="padding:128px 16px; background-color: transparent;" id="about">
+<div class="w3-container" style="padding:80px 16px; background-color: #C5283D;" id="about">
   <h3 class="w3-center">SOBRE NUESTRO JUEGO</h3>
   <p class="w3-center w3-large">Principales características</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
       <i class="fas fa-dragon w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">Sobrevive</p>
-      <p>No bajes la guardia si no quieres convertirte en el saco de boxeo de otro preso</p>
+      <p>No bajes la guardia si no quieres convertirte en el saco de boxeo de otro preso. Lucha contra todos los presos y demuestra que eres más que fuerte para aguantar la vida diaria de un preso en la cárcel de máxima seguridad de Alaska. <br>Derrota a todos los jefes y consigue el puesto del jefe de la cárcel.</p>
     </div>
     <div class="w3-quarter">
       <i class="fas fa-hands-helping w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Interactua</p>
-      <p>Tu poder no bastará para salir de este infierno, haz alianzas, ganate un respeto y consigue la confianza de otros presos para que te ayuden</p>
+      <p>Tu poder no bastará para salir de este infierno, haz alianzas, ganate un respeto y consigue la confianza de otros presos para que te ayuden. <br> Conoce a todos los personajes, aprende de ellos, lucha en conjunto y quizás tengas una oportunidad aquí dentro.</p>
     </div>
     <div class="w3-quarter">
       <i class="fas fa-hand-rock w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large ">Entrena</p>
-      <p>Esto no es el mundo real, aquí estás con los criminales más peligrosos del planeta, entrénate y mejora tus habilidades y poderes para estar a la altura</p>
+      <p>Esto no es el mundo real, aquí estás con los criminales más peligrosos del planeta, entrenate y mejora tus habilidades y poderes para estar a la altura. <br> Consigue puntos de habilidades para ir ampliando tus poderes e incluso aprendiendo los poderes de tus aliados o enemigos. ¡Las posibilidades son infinitas!</p>
     </div>
     <div class="w3-quarter">
       <i class="fas fa-key w3-margin-bottom w3-jumbo"></i>
@@ -122,105 +138,214 @@ background-attachment: fixed;
   </div>
 </div>
 
-
-	
 <!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
+<div class="w3-container w3-light-grey" style="padding:100px 16px">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-      <h3>Nuestra banda sonora oficial</h3>
-      <p>¿Me llamas gordo? te doy la mano<br>Aquí iria el trailer etc no os ralleis</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+      <h3>Tráiler oficial</h3>
+      <p>Ya está disponible el primer tráiler oficial de presentación de The Wrong Reason<br>¡Deja tus impresiones al final de la página en los comentarios!</p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Conoce los escenarios</a></p>
     </div>
-    <div class="w3-col m6">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/NWMRx4G9zjo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="w3-col m6 ">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/2oN1vjiyop0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <!--<img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">-->
     </div>
   </div>
+  <div class="w3-container w3-light-grey" style="padding:30px 16px;">
+    <div class="w3-row-padding w3-center w3-large">
+      <p>Un grupo de criminales con habilidades especiales ha sido encerrado en una prisión de alta seguridad. ¿Por cuánto tiempo?</p>
+      <p>A la alta seguridad de esta prisión se suman sus peligrosos criminales que la componen, averigua quien está de tu lado, usa tu instinto y descubre los secretos que te aguardan. ¿Puedes confiar en cualquiera? Necesitarás algo más que tus poderes para sobrevivir</p>
+      
+    </div>
+	  <div class="w3-container w3-center">
+		  <h3>Banda sonora oficial</h3>
+	  <audio controls>
+  
+  <source src="MUltidef2.mp3" type="audio/mpeg">
+
+</audio>
+		 <p>Aquí podéis reproducir la banda sonora oficial de The Wrong Reason, una canción perfecta para acompañar al ritmo y la acción del videojuego.</p>
+	  </div>
+	  
+  </div>
 </div>
 
-<!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px; background-color: transparent;" id="team" >
-  <h3 class="w3-center">NUESTRO EQUIPO</h3>
-  <p class="w3-center w3-large">El equipo de desarrollo de The Wrong Reason</p>
-  <div class="w3-row-padding w3-grayscale-min" style="margin-top:64px">
-    <div class="w3-col l3 m4 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="image0.png" alt="Alex" style="width:100%">
-        <div class="w3-container">
-          <h3>Alejandro Campbell</h3>
-          <p class="w3-opacity">Web Designer</p>
-          <p>Programador y diseñador de nuestra pagina web oficial</p>
-          
+<div class="w3-container w3-dark-grey" style="padding:30px 16px; background-image: url(old-883672_1920.png); background-attachment: fixed;">
+  <div class="w3-row-padding w3-center w3-large">
+    <h3>PERSONAJES</h3>  
+  </div>
+  <div class="w3-row-padding " style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom flip-box">
+      <div class=" flip-box-inner">
+        <div class="flip-box-front">
+          <img src="Alek Kleist.png" alt="Alek" style="width:100%">
+        </div>
+        <div class="flip-box-back" style="background-color: #C5283D;">
+           <img src="Descripción Alek oscuro2.png" style="max-width: 100%;">
         </div>
       </div>
     </div>
-    <div class="w3-col l3 m4 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="image0 (1).png" alt="Andrea" style="width:100%">
-        <div class="w3-container">
-          <h3>Andrea Gallardo</h3>
-          <p class="w3-opacity">Art Director</p>
-          <p>Directora de arte en el desarrollo de The Wrong Reason</p>
-          
+    <div class="w3-col l3 m6 w3-margin-bottom flip-box" style="max-width: 100%;">
+      <div class="w3-card flip-box-inner">
+        <div class="flip-box-front">
+          <img src="Søren Nielsen.png" alt="Soren" style="width:100%">
+        </div>
+        <div class="flip-box-back" style="background-color: #C5283D;">
+           <img src="Descripción Soren oscuro.png" style="max-width: 100%;">
         </div>
       </div>
     </div>
-    <div class="w3-col l3 m4 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="image0 (3).png" alt="Santiago" style="width:100%">
-        <div class="w3-container">
-          <h3>Santiago Meneses</h3>
-          <p class="w3-opacity">Gameplay Programmer</p>
-          <p>Programador principal en el desarrollo de The Wrong Reason</p>
-         
+    <div class="w3-col l3 m6 w3-margin-bottom flip-box" style="max-width: 100%; height: auto;">
+      <div class="w3-card flip-box-inner">
+        <div class="flip-box-front">
+          <img src="Telum Alba.png" alt="Alex" style="width:100%">
         </div>
+        <div class="flip-box-back" style="background-color: #C5283D;">
+          <img src="Descripción Telum oscuro.png" style="max-width: 100%;">
+       </div>
       </div>
     </div>
-    <div class="w3-col l3 m4 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="image0 (2).png" alt="Alvaro" style="width:100%">
-        <div class="w3-container">
-          <h3>Alvaro Izquierdo</h3>
-          <p class="w3-opacity">Music Director</p>
-          <p>Director y compositor de los sonidos y música de The Wrong Reason</p>
-          
-        </div>
+    <div class="w3-col l3 m6 w3-margin-bottom flip-box" style="max-width: 50%;">
+      <div class="w3-card flip-box-inner">
+        
+        <div class="flip-box-front">
+          <img src="Monique Polgara.png" alt="Alvaro" style="width:100%">
+          </div>
+          <div class="flip-box-back">
+            <img src="Descripción Monique oscuro.png" style="width: 100%;">
+          </div>
       </div>
     </div>
   </div>
-  <div class="w3-row-padding w3-grayscale-min" style="margin-top:64px">
+  <div class="w3-row-padding " style="margin-top:19%; margin-bottom: 19%;">
     <div class="w3-col l3 m6 w3-margin-bottom">
     </div>
-    <!--<div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="Perfil Dibujante Digital.jpg" alt="Betu" style="width:100%">
-        <div class="w3-container">
-          <h3>Betuel Jivandec</h3>
-          <p class="w3-opacity">Character Designer</p>
-          <p>Diseñador y dibujante de los personajes en The Wrong Reason</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+    <div class="w3-col l3 m6 w3-margin-bottom flip-box" style="max-width: 100%;">
+      <div class="w3-card flip-box-inner">
+        <div class="flip-box-front">
+          <img src="Hayate Hidari.png" alt="Alex" style="width:100%">
+        </div>
+        <div class="flip-box-back" style="background-color: #C5283D;">
+           <img src="Descripción Hayate oscuro.png" style="max-width: 100%;">
         </div>
       </div>
-    </div> -->
-    <!--<div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="Perfil Community Manager.jpg" alt="Puri" style="width:100%">
-        <div class="w3-container">
-          <h3>Purificación Méndez</h3>
-          <p class="w3-opacity">Community Manager</p>
-          <p>Community manager de las redes sociales oficiales de The Wrong Reason</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom flip-box" style="max-width: 100%;">
+      <div class="w3-card flip-box-inner">
+        <div class="flip-box-front">
+          <img src="Anya Karamasov.png" alt="Alex" style="width:100%">
+        </div>
+        <div class="flip-box-back" style="background-color: #C5283D;">
+           <img src="Descripción Anya oscuro.png" style="max-width: 100%;">
         </div>
       </div>
-    </div> -->
+    </div>
+  </div>
+	
+</div>
+  
+<div class="w3-container w3-dark-gray" style="padding:30px 16px;">
+  <h3 class="w3-center">Trajes</h3>
+  <p class="w3-center w3-large" >Algunos de los diferentes atuendos que pueden llevar nuestros personajes<br>¡Arrastra el slider azul para cambiar el aspecto de los personajes!</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <div class="img-comp-container">
+      <div class="img-comp-img">
+        <img src="Alek Informal2.png" style="width: 283.4px; height: 378px;" >
+      </div>
+      <div class="img-comp-img img-comp-overlay">
+        <img src="Alek Preso2.png" style="width: 283.4px; height: 378px;">
+      </div>
+    </div>
+    </div>
+    <div class="w3-col l3 m6">
+      <div class="img-comp-container">
+        <div class="img-comp-img">
+          <img src="Soren informal2.png" style="width: 283.4px; height: 378px;" >
+        </div>
+        <div class="img-comp-img img-comp-overlay">
+          <img src="Soren Presa2.png" style="width: 283.4px; height: 378px;">
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6">
+      <div class="img-comp-container">
+        <div class="img-comp-img">
+          <img src="Telum informal.png" style="width: 283.4px; height: 378px;" >
+        </div>
+        <div class="img-comp-img img-comp-overlay">
+          <img src="Telum Preso2.png" style="width: 283.4px; height: 378px;">
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6">
+      <div class="img-comp-container">
+        <div class="img-comp-img">
+          <img src="Monique informal.png" style="width: 283.4px; height: 378px;" >
+        </div>
+        <div class="img-comp-img img-comp-overlay">
+          <img src="Monique Presa.png" style="width: 283.4px; height: 378px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+    <div class="w3-col l3 m6">
+      <div class="img-comp-container">
+        <div class="img-comp-img">
+          <img src="Hayate informal.png" style="width: 303.4px; height: 378px;" >
+        </div>
+        <div class="img-comp-img img-comp-overlay">
+          <img src="Hayate Preso2.png" style="width: 303.4px; height: 378px;">
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6">
+      <div class="img-comp-container">
+        <div class="img-comp-img">
+          <img src="Anya informal2.png" style="width: 283.4px; height: 378px;" >
+        </div>
+        <div class="img-comp-img img-comp-overlay">
+          <img src="Anya Presa2.png" style="width: 283.4px; height: 378px;">
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6">
+      <img  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+    </div>
   </div>
 </div>
 
+<!-- Promo Section "Statistics" 
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">14+</span>
+    <br>Partners
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">55+</span>
+    <br>Projects Done
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">89+</span>
+    <br>Happy Clients
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Meetings
+  </div>
+</div>
+-->
+
 <!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px; background-color: #FFC857" id="work">
-  <h3 class="w3-center" style="font-size: 72px; color: white">CONCEPT ARTS</h3>
-  <p class="w3-center" style="font-size: 30px; color: white">Aquí puedes echarle un vistazo al trabajo artístico del juego, el concepto de escenarios a implementar dentro del juego</p>
+<div class="w3-container" style="padding:128px 16px; background-color: orange" id="work">
+  <h3 class="w3-center" style="font-size: 50px; color: white">CONCEPT ARTS</h3>
+  <p class="w3-center" style="font-size: 20px; color: white">Aquí puedes echarle un vistazo al trabajo artístico del juego, el concepto de escenarios a implementar dentro del juego</p>
 
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-col l4 m3">
@@ -248,9 +373,10 @@ background-attachment: fixed;
 </div>
 
 <!-- Skills Section -->
+<!-- Skills Section -->
 <div class="w3-container w3-light-grey w3-padding-64" style="background-image: url(night-916275.png); background-size:cover">
   <div class="w3-row-padding" >
-    <div class="w3-col m6" style="color: white">
+    <div class="w3-col m6" style="color: white;" >
       <h3>LLEVA LA AVENTURA MÁS ALLÁ</h3>
       <p>Estamos trabajando arduamente en pulir todos los aspectos del juego y que sea<br>
       una aventura apasionante para todos nuestros jugadores.</p>
@@ -261,23 +387,23 @@ background-attachment: fixed;
     <div class="w3-col m6" style="color: white">
       <p class="w3-wide"><i class="fas fa-gamepad"></i> Modo Multijugador</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:90%">230€</div>
+        <div class="w3-container w3-dark-grey w3-center" style="width:23%">230€</div>
       </div>
       <p class="w3-wide"><i class="fab fa-playstation"></i> Playstation Port</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:85%">743€</div>
+        <div class="w3-container w3-dark-grey w3-center" style="width:74%">743€</div>
       </div>
       <p class="w3-wide"><i class="fas fa-ghost"></i> Nuevos personajes</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">125€</div>
+        <div class="w3-container w3-dark-grey w3-center" style="width:12%">125€</div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Pricing Section -->
-<div class="w3-container w3-center" style="padding:128px 16px" id="pricing">
-  <h3 style="font-size: 72px; color: white">SÉ PARTE DEL JUEGO</h3>
+<div class="w3-container w3-center" style="padding:128px 16px; background-image:url(1901.png); background-size: cover;" id="pricing">
+  <h3 style="font-size: 50px; color: white">SÉ PARTE DEL JUEGO</h3>
   <p style="font-size: 30px; color: white">¡Escoge un paquete y únete a nosotros!</p>
   <div class="w3-row-padding" style="margin-top:64px; padding: 0px 300px; ">
     <div class="w3-third w3-section">
@@ -292,20 +418,20 @@ background-attachment: fixed;
           
         </li>
         <li class="w3-light-grey w3-padding-24" style="border-radius: 30px;">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="dragonier2013@gmail.com">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="The Wrong Reason">
-<input type="hidden" name="amount" value="0.00">
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="button_subtype" value="services">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="shipping" value="0.00">
-<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
+			
+			
+				<button class="btn danger button" onClick="show()";>COMPRAR YA</button>
+ 
+
+			<script>
+// When the user clicks on div, open the popup
+function show(){
+
+document.getElementById("alerta").style.display = "inline";
+
+}
+</script>
+         
 
         </li>
       </ul>
@@ -322,20 +448,7 @@ background-attachment: fixed;
           
         </li>
         <li class="w3-light-grey w3-padding-24" style="border-radius: 30px;">
-         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="dragonier2013@gmail.com">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="The Wrong Reason">
-<input type="hidden" name="amount" value="0.00">
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="button_subtype" value="services">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="shipping" value="0.00">
-<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
+         <button class="btn danger button" onClick="show()">COMPRAR YA</button>
 
         </li>
       </ul>
@@ -353,20 +466,7 @@ background-attachment: fixed;
         </li>
         <li class="w3-light-grey w3-padding-24" style="border-radius: 30px;">
 			
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="dragonier2013@gmail.com">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="The Wrong Reason">
-<input type="hidden" name="amount" value="0.00">
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="button_subtype" value="services">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="shipping" value="0.00">
-<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
+         <button class="btn danger button" onClick="show()">COMPRAR YA</button>
 
         </li>
       </ul>
@@ -374,33 +474,172 @@ background-attachment: fixed;
   </div>
 </div>
 
+<div class="alert w3-medio oculto" id="alerta" style="display: none; width: 50%;">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>¡Atención!</strong> Le recordamos que esta página simula la campaña de microfinanciación
+  de un videojuego ficticio (no representa un producto real) por lo que usted no puede comprar nada.
+</div>
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px; background-color: #C5283D;" id="team" >
+  <h3 class="w3-center">NUESTRO EQUIPO</h3>
+  <p class="w3-center w3-large">El equipo de desarrollo de The Wrong Reason</p>
+  <div class="w3-row-padding w3-grayscale-min" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Perfil diseñador.jpg" alt="Alex" style="width:100%">
+        <div class="w3-container">
+          <h3>Alejandro Campbell</h3>
+          <p class="w3-opacity">Web Designer</p>
+          <p>Programador y diseñador de nuestra pagina web oficial</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contactar</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Perfil artista.jpg" alt="Andrea" style="width:100%">
+        <div class="w3-container">
+          <h3>Andrea Gallardo</h3>
+          <p class="w3-opacity">Art Director</p>
+          <p>Directora de arte en el desarrollo de The Wrong Reason</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contactar</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Perfil Programadores.jpg" alt="Santiago" style="width:100%">
+        <div class="w3-container">
+          <h3>Santiago Meneses</h3>
+          <p class="w3-opacity">Gameplay Programmer</p>
+          <p>Co-Programador y co-diseñador de la página web oficial</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contactar</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Perfil director de sonido.jpg" alt="Alvaro" style="width:100%">
+        <div class="w3-container">
+          <h3>Alvaro Izquierdo</h3>
+          <p class="w3-opacity">Music Director</p>
+          <p>Director y compositor de los sonidos y música de The Wrong Reason</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contactar</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale-min" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Perfil Dibujante Digital.jpg" alt="Betu" style="width:100%">
+        <div class="w3-container">
+          <h3>Betuel Jivandec</h3>
+          <p class="w3-opacity">Character Designer</p>
+          <p>Diseñador y dibujante de los personajes en The Wrong Reason</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contactar</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="Perfil Community Manager.jpg" alt="Puri" style="width:100%">
+        <div class="w3-container">
+          <h3>Purificación Méndez</h3>
+          <p class="w3-opacity">Community Manager</p>
+          <p>Community manager de las redes sociales oficiales de The Wrong Reason</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contactar</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Preguntas Frecuentes (FAQ)-->
+<div class="w3-container" style="padding:128px 16px; background-color: lightseagreen;">
+  <h3 class="w3-center">Preguntas frecuentes (FAQ)</h3>
+  <button class="accordion">¿Cuándo saldrá a la venta el juego?</button>
+    <div class="panel">
+      <p>Actualmente nuestro proyecto no se encuentra en una fase muy avanzada de producción, por lo que no sabemos todavía cuando podrá salir al mercado.</p>
+    </div>
+
+  <button class="accordion">¿Se me devolverá mi aportación si no se llega a los objetivos y finalmente el juego no sale a la venta?</button>
+    <div class="panel">
+      <p>Hasta que no estemos seguros de poder sacar el proyecto finalmente adelante no empezaremos a utilizar el dinero recibido por esta campaña de financiación, por lo que pueden estar tranquilos de que en tal caso tendrán su dinero.</p>
+    </div>
+
+  <button class="accordion">¿Esto es un proyecto real?</button>
+    <div class="panel">
+      <p>No, como ya hemos comentado previamente esta página simula la campaña de microfinanciación de un videojuego ficticio.</p>
+    </div>
+	<div class="w3-center" style="margin-top: 10px;"><button class="btn danger button"  onclick="on()">BIBLIOGRAFÍA</button></div>
+	
+</div>
+
+
+<div class="overlays" id="overlays">
+	<div class="text">
+		<span class="closebtn" onclick="off()">&times;</span> 
+	<h3>BIBLIOGRAFÍA DE RECURSOS USADOS</h3>
+  <h4>IMÁGENES:</h4>
+		
+			<a class="li" href="https://www.freepik.es/vector-gratis/vista-frontal-ficha-policial-criminal-escala-medicion_5603551.htm#page=2&query=arresto&position=41">Fondo de sección "Contribuciones"</a>&nbsp;
+  <a class="li" href="https://pixabay.com/es/photos/noche-ciudad-escaleras-barrotes-916275">Fondo de sección "Objetivos"</a><br>
+    <a class="li" href="https://pixabay.com/es/photos/antigua-c%C3%A1rcel-construcci%C3%B3n-883672/">Fondo sección "Personajes"</a>&nbsp;
+<a class="li" href="https://cdn.pixabay.com/photo/2017/04/13/18/48/drawing-2228403_1280.jpg">Imagen "Gameplay Programmer"</a><br>
+		<a class="li" href="https://ec-global.es/wp-content/uploads/2018/01/mitos-community-manager.jpg">Imagen "Community Manager"</a>&nbsp;
+    <a class="li" href="https://eresmama.com/wp-content/uploads/2020/11/nino-tocando-piano-musica-500x333.jpg">Imagen "Music Director"</a><br>
+		<a class="li" href="https://eresmama.com/wp-content/uploads/2018/04/ordenador-freelancer-mujer-trabajo-casa-500x333.jpg">Imagen "Character Designer"</a>&nbsp;
+		<a class="li" href="https://canalpress.net/wp-content/uploads/2020/12/canon-EOS-C70_Lifestyle_0023-500x333.jpg">Imagen "Web Designer"</a><br>
+		<a class="li" href="https://eresmama.com/wp-content/uploads/2020/05/nino-pintando-acuarelas-500x333.jpg">Imagen "Art Director"</a>&nbsp;
+		
+		<h4>CÓDIGO USADO</h4>
+		<a class="li" href="https://www.w3schools.com/howto/">W3 Schools</a>
+ 
+   
+	</div>
+	</div>
+
+	
+	<script>
+		function on() {
+  document.getElementById("overlays").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlays").style.display = "none";
+}
+	</script>
+	
+
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <h3 class="w3-center">CONTÁCTANOS</h3>
+  <p class="w3-center w3-large">¿Tienes alguna duda sobre el juego?¿Quieres hablar directamente con nosotros? Envíanos un mensaje:</p>
   <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Madrid, España</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Teléfono: +34 601 23 45 67</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: thewrongreasonoficial@gmail.com</p>
     <br>
     <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Nombre" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Asunto" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Mensaje" required name="Message"></p>
       <p>
         <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          <i class="fa fa-paper-plane"></i> ENVIAR MENSAJE
         </button>
       </p>
     </form>
   
     <!-- Image of location/map -->
-    <img src="Imagen prov abajo.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+    <!--<img src="Imagen prov abajo.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">-->
   </div>
 </div>
-	
-	<div id="disqus_thread" class="w3-light-grey"></div>	
+
+<div id="disqus_thread" class="w3-light-grey"></div>	
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -420,34 +659,35 @@ background-attachment: fixed;
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-	<!-- Disclaimer Pop-Up -->
+<!-- Disclaimer Pop-Up -->
 <div class="overlay" id="overlay">
-			<div class="popup" id="popup">
-			<h3>DISCLAIMER</h3>
-			<h4>Página realizada por: Equipo UWU (Equipo G)</h4>
-			<p class="disclaimer">
-			ATENCIÓN: Esta página simula la campaña de microfinanciación
-                de un videojuego ficticio (no representa un producto real).
-                Práctica de Multimedia, 1º GDDV - Curso 20/21 (Móstoles), URJC.
-              La URJC no se hace responsable del contenido expuesto por el autor.
-				
-				
-				</p>
+  <div class="popup" id="popup">
+  <h3>DISCLAIMER</h3>
+  <h4>Página realizada por: Equipo UWU (Equipo G)</h4>
+  <p class="disclaimer">
+  ATENCIÓN: Esta página simula la campaña de microfinanciación
+            de un videojuego ficticio (no representa un producto real).
+            Práctica de Multimedia, 1º GDDV - Curso 20/21 (Móstoles), URJC.
+          La URJC no se hace responsable del contenido expuesto por el autor.
+    
+    
+    </p>
 <!-- Botón de "Entendido" -->
-		<input type="submit" class="btn-submit" id="btn-submit" value="Entendido" onClick="closeModal()">		
-		</div>
-		</div>
+  <input type="submit" class="btn-submit" id="btn-submit" value="Entendido" onClick="closeModal()">		
+  </div>
+</div>
 <!-- Integración de javascript para funciones del disclaimer -->
 <script src="popup.js"></script>
-
+	
+	
 <!-- Footer -->
-<footer class="w3-center w3-padding-64" style="background-color: #255F85;">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<footer class="w3-center w3-padding-64" style="background-color: black; color: white;">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Volver al principio</a>
   <div class="w3-xlarge w3-section">  
-    <i class="fab fa-instagram w3-hover-opacity"></i>
+    <a href="https://www.instagram.com/abaspistudio/"><i class="fab fa-instagram w3-hover-opacity"></i></a>
     <i class="fab fa-twitter w3-hover-opacity"></i>
   </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+ 
 </footer>
 <script>
   /* Light YouTube Embeds by @labnol */
@@ -505,6 +745,103 @@ function w3_close() {
     mySidebar.style.display = "none";
 }
 </script>
+<script>
+  function initComparisons() {
+    var x, i;
+    /*find all elements with an "overlay" class:*/
+    x = document.getElementsByClassName("img-comp-overlay");
+    for (i = 0; i < x.length; i++) {
+      /*once for each "overlay" element:
+      pass the "overlay" element as a parameter when executing the compareImages function:*/
+      compareImages(x[i]);
+    }
+    function compareImages(img) {
+      var slider, img, clicked = 0, w, h;
+      /*get the width and height of the img element*/
+      w = img.offsetWidth;
+      h = img.offsetHeight;
+      /*set the width of the img element to 50%:*/
+      img.style.width = (w / 2) + "px";
+      /*create slider:*/
+      slider = document.createElement("DIV");
+      slider.setAttribute("class", "img-comp-slider");
+      /*insert slider*/
+      img.parentElement.insertBefore(slider, img);
+      /*position the slider in the middle:*/
+      slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+      slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+      /*execute a function when the mouse button is pressed:*/
+      slider.addEventListener("mousedown", slideReady);
+      /*and another function when the mouse button is released:*/
+      window.addEventListener("mouseup", slideFinish);
+      /*or touched (for touch screens:*/
+      slider.addEventListener("touchstart", slideReady);
+      /*and released (for touch screens:*/
+      window.addEventListener("touchend", slideFinish);
+      function slideReady(e) {
+        /*prevent any other actions that may occur when moving over the image:*/
+        e.preventDefault();
+        /*the slider is now clicked and ready to move:*/
+        clicked = 1;
+        /*execute a function when the slider is moved:*/
+        window.addEventListener("mousemove", slideMove);
+        window.addEventListener("touchmove", slideMove);
+      }
+      function slideFinish() {
+        /*the slider is no longer clicked:*/
+        clicked = 0;
+      }
+      function slideMove(e) {
+        var pos;
+        /*if the slider is no longer clicked, exit this function:*/
+        if (clicked == 0) return false;
+        /*get the cursor's x position:*/
+        pos = getCursorPos(e)
+        /*prevent the slider from being positioned outside the image:*/
+        if (pos < 0) pos = 0;
+        if (pos > w) pos = w;
+        /*execute a function that will resize the overlay image according to the cursor:*/
+        slide(pos);
+      }
+      function getCursorPos(e) {
+        var a, x = 0;
+        e = e || window.event;
+        /*get the x positions of the image:*/
+        a = img.getBoundingClientRect();
+        /*calculate the cursor's x coordinate, relative to the image:*/
+        x = e.pageX - a.left;
+        /*consider any page scrolling:*/
+        x = x - window.pageXOffset;
+        return x;
+      }
+      function slide(x) {
+        /*resize the image:*/
+        img.style.width = x + "px";
+        /*position the slider:*/
+        slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+      }
+    }
+  }
+  </script>
+  <script>
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+</script>
+<script>
+  var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+  </script>
 </body>
 </html>

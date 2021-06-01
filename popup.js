@@ -4,6 +4,8 @@
 var overlay = document.getElementById('overlay'),
 	popup = document.getElementById('popup'),
     btnSubmit = document.getElementById('btn-submit');
+	
+    
 
 /* Función para cerrar el disclaimer al pulsar entendido */
 btnSubmit.addEventListener('click', function(e){
